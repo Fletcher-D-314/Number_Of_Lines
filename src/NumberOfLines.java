@@ -15,9 +15,6 @@ public class NumberOfLines {
         boolean run = true;
 
         while (run) {
-            System.out.println("num1 = " + num1 + "\tnum2 = " + num2 + "\tnum3 = " + num3);
-            i++;
-            num1 = i;
 
             if (num1 == 9) {
                 i = 0;
@@ -30,6 +27,18 @@ public class NumberOfLines {
             }
             if (num3 == 9) {
                 run = false;
+            } else {
+
+                if (num1!=num2){
+                    if (num1 != num3){
+                        if (num2 != num3){
+                            System.out.println("num1 = " + num1 + "\tnum2 = " + num2 + "\tnum3 = " + num3);
+                        }
+                    }
+                }
+
+                i++;
+                num1 = i;
             }
         }
     }
