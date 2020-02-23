@@ -7,7 +7,6 @@ public class NumberOfLines {
     public static void main(String[] args) {
 
         int gridSize = 3;
-        int[][] grid = new int[gridSize][gridSize];
         int num1 = 0;
         int num2 = 0;
         int num3 = 0;
@@ -16,16 +15,16 @@ public class NumberOfLines {
 
         while (run) {
 
-            if (num1 == 9) {
+            if (num1 == (gridSize*gridSize)) {
                 i = 0;
                 num1 = 0;
                 num2++;
             }
-            if (num2 == 9) {
+            if (num2 == (gridSize*gridSize)) {
                 num2 = 0;
                 num3++;
             }
-            if (num3 == 9) {
+            if (num3 == (gridSize*gridSize)) {
                 run = false;
             } else {
 
