@@ -6,7 +6,7 @@ public class NumberOfLines {
 
     public static void main(String[] args) {
 
-        int gridSize = 5;
+        int gridSize = 3;
         int[][] grid = new int[gridSize][gridSize];
         int x = 0;
         int y = 0;
@@ -21,6 +21,7 @@ public class NumberOfLines {
             if (x == gridSize - 1) {
                 x = -1;
                 y++;
+                grid = new int[gridSize][gridSize];
             }
             x++;
             if (y == gridSize) {
