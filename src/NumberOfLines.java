@@ -8,24 +8,28 @@ public class NumberOfLines {
 
         int gridSize = 3;
         int[][] grid = new int[gridSize][gridSize];
-        int j = 0;
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
         int i = 0;
-        boolean isRunning = true;
+        boolean run = true;
 
-        while (isRunning) {
-            grid[i][j] = 1;
-            for (int[] row : grid) {
-                System.out.println(Arrays.toString(row));
+        while (run) {
+            System.out.println("num1 = " + num1 + "\tnum2 = " + num2 + "\tnum3 = " + num3);
+            i++;
+            num1 = i;
+
+            if (num1 == 9) {
+                i = 0;
+                num1 = 0;
+                num2++;
             }
-            System.out.println();
-            if (j == gridSize - 1) {
-                j = -1;
-                i++;
-                grid = new int[gridSize][gridSize];
+            if (num2 == 9) {
+                num2 = 0;
+                num3++;
             }
-            j++;
-            if (i == gridSize) {
-                isRunning = false;
+            if (num3 == 9) {
+                run = false;
             }
         }
     }
